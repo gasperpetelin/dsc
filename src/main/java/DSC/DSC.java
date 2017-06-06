@@ -116,104 +116,61 @@ public class DSC
 
     public Map<Integer, Double> ranking(Request data, int problemNumber)
     {
+        //p-values between algorithm pairs
         RealMatrix m = this.calculatePValueSimilarityMatrix(new KolmogorovSmirnovTest(), data, problemNumber);
+        //threshold limit
         double alphaLimit = data.getAlpha()/CombinatoricsUtils.binomialCoefficient(data.getNumberOfAlgorithms(), 2);
-
+        //computing threshold
         m = this.significanceLevelThreshold(m, alphaLimit);
 
-        boolean transitive = this.transitivityCheck(m);
-
-
+        //Algorithm means for specified problem
         HashMap<Algorithm, Double> algorithmMap = data.getMeans(problemNumber);
 
-        double[] means = new double[data.getNumberOfAlgorithms()];
 
-        for (int i = 0; i < data.getNumberOfAlgorithms(); i++)
-        {
-            double sum = 0;
-            for(double d : data.getAlgorithm(i).getProblem(problemNumber).getData())
-                sum+=d;
-            means[i] = sum/data.getAlgorithm(i).getProblem(problemNumber).getData().length;
-        }
-
-        List<Integer> allAlgorithms = new ArrayList<Integer>();
-        for (int i = 0; i < m.getRowDimension(); i++)
-        {
-            allAlgorithms.add(i);
-        }
-
-        RealMatrix m1 = MatrixUtils.createRealMatrix(data.getNumberOfAlgorithms(), data.getNumberOfAlgorithms());
-
-        for (int i = 0; i < data.getNumberOfAlgorithms(); i++)
-        {
-            for (int j = 0; j < data.getNumberOfAlgorithms(); j++)
-            {
-                if(i==j)
-                    m1.setEntry(i, j, 0);
-                else
-                    m1.setEntry(i, j , m.getEntry(i, j));
-            }
-        }
-
-        List<Set<Algorithm>> sets = this.buildDisjunctiveSets(data.getAlgorithms(), m1);
-        List<SetsSort> groups = new ArrayList<SetsSort>();
-        for(Set<Algorithm> s:sets)
-        {
-            groups.add(new SetsSort(s, algorithmMap.get(s.iterator().next())));
-        }
-
-
+        //List of groups
+        List<SetsSort> groups = new ArrayList<>();
+        this.buildDisjunctiveSets(data.getAlgorithms(), m).forEach((s)->groups.add(new SetsSort(s, algorithmMap.get(s.iterator().next()))));
         Collections.sort(groups);
 
-        if(transitive)
+        if(this.transitivityCheck(m))
         {
-            List<Integer> temp = new ArrayList<Integer>();
-            for (int i = 1; i < groups.get(0).getAlgorithms().size() + 1; i++)
-            {
-                temp.add(i);
-            }
-            groups.get(0).rank = this.sum(temp)/temp.size();
+            int max = groups.get(0).getAlgorithms().size();
+            groups.get(0).rank = (double)this.naturalNumberSum(1, max)/max;
             if(groups.size()>1)
             {
                 for (int i = 1; i < groups.size() ; i++)
                 {
                     int from = groups.get(i-1).getAlgorithms().size() + 1;
                     int to = groups.get(i-1).getAlgorithms().size() + groups.get(i).getAlgorithms().size();
-                    int sm = 0;
-                    for (int j = from; j < to +1 ; j++)
-                    {
-                        sm+=j/groups.get(i).getAlgorithms().size();
-                    }
-                    groups.get(i).rank = sm;
+                    int sum = this.naturalNumberSum(from, to);
+                    groups.get(i).rank = (double) sum/groups.get(i).getAlgorithms().size();
                 }
             }
 
-            HashMap<Integer, Double> rtrn = new HashMap<Integer, Double>();
+            final HashMap<Integer, Double> rtrn = new HashMap<>();
             for(SetsSort g:groups)
             {
-                for(Algorithm algofg:g.getAlgorithms())
-                {
-                    rtrn.put(data.getAlgorithms().lastIndexOf(algofg), g.rank);
-                }
+                g.getAlgorithms().forEach((a)->rtrn.put(data.getAlgorithms().lastIndexOf(a), g.rank));
             }
             return rtrn;
         }
         else
         {
-            List<AlgoMeanPair> ls = new ArrayList<AlgoMeanPair>();
-            for (int i = 0; i < means.length; i++)
+            List<AlgoMeanPair> ls = new ArrayList<>();
+            for (int i = 0; i < data.getNumberOfAlgorithms(); i++)
             {
-                ls.add(new AlgoMeanPair(i, means[i]));
+                Algorithm a = data.getAlgorithm(i);
+                ls.add(new AlgoMeanPair(i, algorithmMap.get(a)));
             }
 
             Collections.sort(ls);
 
-            HashMap<Integer, Double> rtrn = new HashMap<Integer, Double>();
+            HashMap<Integer, Double> rtrn = new HashMap<>();
 
             double rang = 0.0;
             while (!ls.isEmpty())
             {
-                List<AlgoMeanPair> sameMeanList = new ArrayList<AlgoMeanPair>();
+                List<AlgoMeanPair> sameMeanList = new ArrayList<>();
                 sameMeanList.add(ls.remove(0));
                 while (!ls.isEmpty() && sameMeanList.get(0).mean == ls.get(0).mean)
                 {
@@ -240,14 +197,12 @@ public class DSC
         }
     }
 
-    public double sum(List<Integer> ls)
+    public int naturalNumberSum(int from, int to)
     {
-        double d = 0;
-        for(Integer db:ls)
-        {
-            d+=db;
-        }
-        return d;
+        int max = (to*(to+1))/2;
+        from--;
+        int min = (from*(from+1))/2;
+        return max-min;
     }
 
 }
