@@ -3,10 +3,10 @@ package Input;
 
 public class AlgoMeanPair implements Comparable<AlgoMeanPair>
 {
-    public int algorithm;
-    public double mean;
+    private Algorithm algorithm;
+    private double mean;
 
-    public AlgoMeanPair(int algo, double mean)
+    public AlgoMeanPair(Algorithm algo, double mean)
     {
         this.algorithm = algo;
         this.mean = mean;
@@ -20,5 +20,15 @@ public class AlgoMeanPair implements Comparable<AlgoMeanPair>
         if(this.mean>o.mean)
             r = -1;
         return -1*r;
+    }
+
+    public Algorithm getAlgorithm()
+    {
+        return this.algorithm;
+    }
+
+    public double getMean()
+    {
+        return this.mean;
     }
 }

@@ -1,5 +1,7 @@
 package DSC;
 
+import Input.Algorithm;
+import Input.Request;
 import JsonParsing.Parsing;
 import org.junit.jupiter.api.Test;
 
@@ -340,57 +342,64 @@ class DSCTest
 
     private DSC dsc = new DSC();
 
+
     @Test
     void websiteExampleRankF1()
     {
-        Map<Integer, Double> map = dsc.ranking(Parsing.getRequest(this.shortWebsiteTest), 0);
-        assertEquals((double) map.get(0), 1.5);
-        assertEquals((double) map.get(1), 1.5);
+        Request data = Parsing.getRequest(this.shortWebsiteTest);
+        Map<Algorithm, Double> map = dsc.ranking(data, 0);
+        assertEquals((double) map.get(data.getAlgorithm(0)), 1.5);
+        assertEquals((double) map.get(data.getAlgorithm(1)), 1.5);
     }
 
     @Test
     void customExampleRankF4()
     {
-        Map<Integer, Double> map = dsc.ranking(Parsing.getRequest(this.customJsonwith21Examples), 3);
-        assertEquals((double) map.get(0), 2);
-        assertEquals((double) map.get(1), 2);
-        assertEquals((double) map.get(2), 2);
+        Request data = Parsing.getRequest(this.customJsonwith21Examples);
+        Map<Algorithm, Double> map = dsc.ranking(data, 3);
+        assertEquals((double) map.get(data.getAlgorithm(0)), 2);
+        assertEquals((double) map.get(data.getAlgorithm(1)), 2);
+        assertEquals((double) map.get(data.getAlgorithm(2)), 2);
     }
 
     @Test
     void customExampleRankF6()
     {
-        Map<Integer, Double> map = dsc.ranking(Parsing.getRequest(this.customJsonwith21Examples), 5);
-        assertEquals((double) map.get(0), 2);
-        assertEquals((double) map.get(1), 3);
-        assertEquals((double) map.get(2), 1);
+        Request data = Parsing.getRequest(this.customJsonwith21Examples);
+        Map<Algorithm, Double> map = dsc.ranking(data, 5);
+        assertEquals((double) map.get(data.getAlgorithm(0)), 2);
+        assertEquals((double) map.get(data.getAlgorithm(1)), 3);
+        assertEquals((double) map.get(data.getAlgorithm(2)), 1);
     }
 
     @Test
     void customExampleRankF19()
     {
-        Map<Integer, Double> map = dsc.ranking(Parsing.getRequest(this.customJsonwith21Examples), 18);
-        assertEquals((double) map.get(0), 3);
-        assertEquals((double) map.get(1), 2);
-        assertEquals((double) map.get(2), 1);
+        Request data = Parsing.getRequest(this.customJsonwith21Examples);
+        Map<Algorithm, Double> map = dsc.ranking(data, 18);
+        assertEquals((double) map.get(data.getAlgorithm(0)), 3);
+        assertEquals((double) map.get(data.getAlgorithm(1)), 2);
+        assertEquals((double) map.get(data.getAlgorithm(2)), 1);
     }
 
     @Test
     void customExampleRankF22()
     {
-        Map<Integer, Double> map = dsc.ranking(Parsing.getRequest(this.customJsonwith21Examples), 21);
-        assertEquals((double) map.get(0), 2);
-        assertEquals((double) map.get(1), 2);
-        assertEquals((double) map.get(2), 2);
+        Request data = Parsing.getRequest(this.customJsonwith21Examples);
+        Map<Algorithm, Double> map = dsc.ranking(data, 21);
+        assertEquals((double) map.get(data.getAlgorithm(0)), 2);
+        assertEquals((double) map.get(data.getAlgorithm(1)), 2);
+        assertEquals((double) map.get(data.getAlgorithm(2)), 2);
     }
 
     @Test
     void customExampleRankF1()
     {
-        Map<Integer, Double> map = dsc.ranking(Parsing.getRequest(this.customJsonwith21Examples), 0);
-        assertEquals((double) map.get(0), 1.5);
-        assertEquals((double) map.get(1), 1.5);
-        assertEquals((double) map.get(2), 3);
+        Request data = Parsing.getRequest(this.customJsonwith21Examples);
+        Map<Algorithm, Double> map = dsc.ranking(data, 0);
+        assertEquals((double) map.get(data.getAlgorithm(0)), 1.5);
+        assertEquals((double) map.get(data.getAlgorithm(1)), 1.5);
+        assertEquals((double) map.get(data.getAlgorithm(2)), 3);
     }
 
 }

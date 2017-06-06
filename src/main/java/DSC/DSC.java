@@ -114,7 +114,7 @@ public class DSC
         return returnSets;
     }
 
-    public Map<Integer, Double> ranking(Request data, int problemNumber)
+    public Map<Algorithm, Double> ranking(Request data, int problemNumber)
     {
         //p-values between algorithm pairs
         RealMatrix m = this.calculatePValueSimilarityMatrix(new KolmogorovSmirnovTest(), data, problemNumber);
@@ -147,10 +147,10 @@ public class DSC
                 }
             }
 
-            final HashMap<Integer, Double> rtrn = new HashMap<>();
+            final HashMap<Algorithm, Double> rtrn = new HashMap<>();
             for(SetsSort g:groups)
             {
-                g.getAlgorithms().forEach((a)->rtrn.put(data.getAlgorithms().lastIndexOf(a), g.rank));
+                g.getAlgorithms().forEach((a)->rtrn.put(a, g.rank));
             }
             return rtrn;
         }
@@ -160,19 +160,19 @@ public class DSC
             for (int i = 0; i < data.getNumberOfAlgorithms(); i++)
             {
                 Algorithm a = data.getAlgorithm(i);
-                ls.add(new AlgoMeanPair(i, algorithmMap.get(a)));
+                ls.add(new AlgoMeanPair(a, algorithmMap.get(a)));
             }
 
             Collections.sort(ls);
 
-            HashMap<Integer, Double> rtrn = new HashMap<>();
+            HashMap<Algorithm, Double> rtrn = new HashMap<>();
 
             double rang = 0.0;
             while (!ls.isEmpty())
             {
                 List<AlgoMeanPair> sameMeanList = new ArrayList<>();
                 sameMeanList.add(ls.remove(0));
-                while (!ls.isEmpty() && sameMeanList.get(0).mean == ls.get(0).mean)
+                while (!ls.isEmpty() && sameMeanList.get(0).getMean() == ls.get(0).getMean())
                 {
                     sameMeanList.add(ls.get(0));
                 }
@@ -180,7 +180,7 @@ public class DSC
                 if(sameMeanList.size()==1)
                 {
                     rang++;
-                    rtrn.put(sameMeanList.get(0).algorithm, rang);
+                    rtrn.put(sameMeanList.get(0).getAlgorithm(), rang);
                 }
                 else
                 {
@@ -189,7 +189,7 @@ public class DSC
                         rang++;
                         double r = (rang + rang + sameMeanList.size()-1) / sameMeanList.size();
                         rang += sameMeanList.size() - 1;
-                        rtrn.put(p.algorithm, r);
+                        rtrn.put(p.getAlgorithm(), r);
                     }
                 }
             }
