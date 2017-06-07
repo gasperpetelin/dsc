@@ -1,9 +1,7 @@
 package DSC;
 
-import Input.AlgoMeanPair;
 import Input.Algorithm;
 import Input.Request;
-import Input.SetsSort;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.util.CombinatoricsUtils;
@@ -130,7 +128,7 @@ public class DSC
         //List of groups
         List<SetsSort> groups = new ArrayList<>();
         this.buildDisjunctiveSets(data.getAlgorithms(), m).forEach((s)->groups.add(new SetsSort(s, algorithmMap.get(s.iterator().next()))));
-        Collections.sort(groups);
+        Collections.sort(groups, Collections.reverseOrder());
 
         if(this.transitivityCheck(m))
         {
@@ -156,13 +154,9 @@ public class DSC
         }
         else
         {
+            //List of algorithms sorted by mean
             List<AlgoMeanPair> ls = new ArrayList<>();
-            for (int i = 0; i < data.getNumberOfAlgorithms(); i++)
-            {
-                Algorithm a = data.getAlgorithm(i);
-                ls.add(new AlgoMeanPair(a, algorithmMap.get(a)));
-            }
-
+            data.getAlgorithms().forEach((a)->ls.add(new AlgoMeanPair(a, algorithmMap.get(a))));
             Collections.sort(ls);
 
             HashMap<Algorithm, Double> rtrn = new HashMap<>();
@@ -170,6 +164,7 @@ public class DSC
             double rang = 0.0;
             while (!ls.isEmpty())
             {
+                //Rank computation
                 List<AlgoMeanPair> sameMeanList = new ArrayList<>();
                 sameMeanList.add(ls.remove(0));
                 while (!ls.isEmpty() && sameMeanList.get(0).getMean() == ls.get(0).getMean())

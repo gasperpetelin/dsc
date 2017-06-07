@@ -1,5 +1,7 @@
-package Input;
+package DSC;
 
+
+import Input.Algorithm;
 
 public class AlgoMeanPair implements Comparable<AlgoMeanPair>
 {
@@ -14,12 +16,7 @@ public class AlgoMeanPair implements Comparable<AlgoMeanPair>
 
     public int compareTo(AlgoMeanPair o)
     {
-        int r = 0;
-        if(this.mean<o.mean)
-            r = 1;
-        if(this.mean>o.mean)
-            r = -1;
-        return -1*r;
+        return Double.compare(this.mean, o.mean);
     }
 
     public Algorithm getAlgorithm()

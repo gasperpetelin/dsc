@@ -1,5 +1,7 @@
-package Input;
+package DSC;
 
+
+import Input.Algorithm;
 
 import java.util.Set;
 
@@ -23,11 +25,7 @@ public class SetsSort implements Comparable<SetsSort>
 
     public int compareTo(SetsSort o)
     {
-        if(this.getMean()<o.getMean())
-            return -1;
-        if(this.getMean()>o.getMean())
-            return 1;
-        return 0;
+        return Double.compare(o.getMean(), this.mean);
     }
 
     public Set<Algorithm> getAlgorithms()

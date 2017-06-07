@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea458a06-ea98-4b74-aced-27113cda5238" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Input/AlgorithmRankPair.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Input/comp.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java" afterPath="$PROJECT_DIR$/src/main/java/DSC/AlgoMeanPair.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Input/SetsSort.java" afterPath="$PROJECT_DIR$/src/main/java/DSC/SetsSort.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSC/DSC.java" afterPath="$PROJECT_DIR$/src/main/java/DSC/DSC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java" afterPath="$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DSC/DSCTest.java" afterPath="$PROJECT_DIR$/src/test/java/DSC/DSCTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="DSCTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DSCTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/DSC/DSCTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="398" column="54" lean-forward="false" selection-start-line="398" selection-start-column="54" selection-end-line="398" selection-end-column="54" />
+            <state relative-caret-position="357">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="340" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -34,134 +32,121 @@
       <file leaf-file-name="DSC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DSC/DSC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="116" column="24" lean-forward="false" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+            <state relative-caret-position="363">
+              <caret line="128" column="22" lean-forward="false" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#calculatePValueSimilarityMatrix#0;class#DSC#0" expanded="false" />
                 <element signature="method#significanceLevelThreshold#0;class#DSC#0" expanded="false" />
+                <element signature="method#transitivityCheck#0;class#DSC#0" expanded="false" />
+                <element signature="method#buildDisjunctiveSets#0;class#DSC#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SetsSort.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Input/SetsSort.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DSC/SetsSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="457">
+              <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding>
-                <element signature="e#359#360#0" expanded="false" />
-                <element signature="e#391#392#0" expanded="false" />
-                <element signature="e#631#632#0" expanded="false" />
-                <element signature="e#669#670#0" expanded="false" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Input/Request.java">
+      <file leaf-file-name="ResponseHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ResponseHandler/ResponseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
-                <element signature="e#210#211#0" expanded="false" />
-                <element signature="e#238#239#0" expanded="false" />
-                <element signature="e#284#285#0" expanded="false" />
-                <element signature="e#318#319#0" expanded="false" />
-                <element signature="e#355#356#0" expanded="false" />
-                <element signature="e#384#385#0" expanded="false" />
-                <element signature="e#432#433#0" expanded="false" />
-                <element signature="e#468#469#0" expanded="false" />
-                <element signature="e#518#519#0" expanded="false" />
-                <element signature="e#545#546#0" expanded="false" />
-                <element signature="e#610#611#0" expanded="false" />
-                <element signature="e#648#649#0" expanded="false" />
-                <element signature="e#694#695#0" expanded="false" />
-                <element signature="e#728#729#0" expanded="false" />
-                <element signature="e#780#781#0" expanded="false" />
-                <element signature="e#823#824#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Algorithm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Input/Algorithm.java">
+      <file leaf-file-name="ResponseHandlerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ResponseHandler/ResponseHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+            <state relative-caret-position="355">
+              <caret line="297" column="8" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="72" />
               <folding>
-                <element signature="e#291#292#0" expanded="false" />
-                <element signature="e#318#319#0" expanded="false" />
-                <element signature="e#362#363#0" expanded="false" />
-                <element signature="e#394#395#0" expanded="false" />
-                <element signature="e#440#441#0" expanded="false" />
-                <element signature="e#471#472#0" expanded="false" />
-                <element signature="e#530#531#0" expanded="false" />
-                <element signature="e#570#571#0" expanded="false" />
-                <element signature="e#614#615#0" expanded="false" />
-                <element signature="e#652#653#0" expanded="false" />
-                <element signature="e#700#701#0" expanded="false" />
-                <element signature="e#742#743#0" expanded="false" />
+                <element signature="e#29834#29835#0" expanded="true" />
+                <element signature="e#29913#29914#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KolmogorovSmirnovTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DSC/KolmogorovSmirnovTest.java">
+      <file leaf-file-name="Response.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Output/Response.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="233">
+              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding>
-                <element signature="e#188#189#0" expanded="false" />
-                <element signature="e#250#251#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISimilarityTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DSC/ISimilarityTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AlgoMeanPair.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DSC/AlgoMeanPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="268">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Problem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Input/Problem.java">
+      <file leaf-file-name="AlgorithmRank.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Output/AlgorithmRank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="126">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding>
-                <element signature="e#261#262#0" expanded="false" />
-                <element signature="e#288#289#0" expanded="false" />
-                <element signature="e#332#333#0" expanded="false" />
-                <element signature="e#364#365#0" expanded="false" />
-                <element signature="e#401#402#0" expanded="false" />
-                <element signature="e#428#429#0" expanded="false" />
-                <element signature="e#474#475#0" expanded="false" />
-                <element signature="e#506#507#0" expanded="false" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Method.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Output/Method.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProblemSolutions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Output/ProblemSolutions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#599#600#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,17 +157,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SetsSort</find>
       <find>means</find>
       <find>m1</find>
+      <find>SetsSort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,8 +203,16 @@
         <option value="$PROJECT_DIR$/src/main/java/Input/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/Input/SetsSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DSC/DSC.java" />
         <option value="$PROJECT_DIR$/src/test/java/DSC/DSCTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Output/AlgorithmRank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Output/Method.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Output/ProblemSolutions.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ResponseHandler/ResponseHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Output/Response.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DSC/DSC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DSC/SetsSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DSC/AlgoMeanPair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ResponseHandler/ResponseHandler.java" />
       </list>
     </option>
   </component>
@@ -251,6 +244,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,6 +256,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResponseHandler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,6 +370,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResponseHandler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dsc-algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JsonParsing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,9 +505,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,12 +512,16 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MO-Java-Matlab" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ResponseHandler" />
       <recent name="DSC" />
       <recent name="Input" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="DSC" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -438,22 +539,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DSCTest">
-    <configuration default="false" name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="DSC" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ResponseHandlerTest">
     <configuration default="false" name="ParsingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -546,6 +632,32 @@
       <option name="MAIN_CLASS_NAME" value="DSC.DSCTest" />
       <option name="METHOD_NAME" value="customExampleRankF4" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ResponseHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ResponseHandler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DSC" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ResponseHandler" />
+      <option name="MAIN_CLASS_NAME" value="ResponseHandler.ResponseHandlerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -708,19 +820,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ParsingTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DSCTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DSCTest.websiteRank" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DSCTest.customExampleRankF4" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ParsingTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DSCTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DSCTest.websiteRank" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DSCTest.customExampleRankF4" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ResponseHandlerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DSCTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DSCTest.customExampleRankF4" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DSCTest.websiteRank" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ParsingTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.main" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ResponseHandlerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DSCTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DSCTest.customExampleRankF4" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DSCTest.websiteRank" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ParsingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -741,35 +853,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DSCTest - 2017.06.06 at 15h 43m 27s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 14m 24s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 15h 43m 57s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 15m 09s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 15h 46m 36s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 15m 18s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 15h 46m 39s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 18m 15s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 15h 48m 56s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 19m 18s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 15h 49m 42s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 19m 28s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 15h 50m 20s.xml">
+    <history-entry file="DSCTest - 2017.06.07 at 12h 23m 56s.xml">
       <configuration name="DSCTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 16h 13m 11s.xml">
-      <configuration name="DSCTest" configurationId="JUnit" />
+    <history-entry file="ResponseHandlerTest - 2017.06.07 at 12h 03m 42s.xml">
+      <configuration name="ResponseHandlerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 16h 18m 19s.xml">
-      <configuration name="DSCTest" configurationId="JUnit" />
+    <history-entry file="ResponseHandlerTest - 2017.06.07 at 12h 03m 45s.xml">
+      <configuration name="ResponseHandlerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DSCTest - 2017.06.06 at 16h 20m 05s.xml">
-      <configuration name="DSCTest" configurationId="JUnit" />
+    <history-entry file="ResponseHandlerTest - 2017.06.07 at 12h 23m 58s.xml">
+      <configuration name="ResponseHandlerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -782,16 +894,16 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29105324" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29105324" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29105324" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1783029" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18098818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33069083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33069083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -805,98 +917,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="72" />
+      <option name="time" value="76" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="((double[][])((Array2DRowRealMatrix)m).data)[0][1]" custom="org.apache.commons.math3.linear.Array2DRowRealMatrix,double[][]" />
-        <watch expression="((double[][])((Array2DRowRealMatrix)m).data)[0][1]" language="JAVA" custom="org.apache.commons.math3.linear.Array2DRowRealMatrix,double[][]" />
-        <watch expression="((double[][])((Array2DRowRealMatrix)m).data)[0]" custom="org.apache.commons.math3.linear.Array2DRowRealMatrix,double[][]" />
-        <watch expression="((double[][])((Array2DRowRealMatrix)m1).data)[2]" custom="org.apache.commons.math3.linear.Array2DRowRealMatrix,double[][]" />
-        <watch expression="ls.get(2)" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/DSC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2079">
-          <caret line="148" column="27" lean-forward="false" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#calculatePValueSimilarityMatrix#0;class#DSC#0" expanded="false" />
-            <element signature="method#significanceLevelThreshold#0;class#DSC#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
-          <folding>
-            <element signature="e#291#292#0" expanded="false" />
-            <element signature="e#318#319#0" expanded="false" />
-            <element signature="e#362#363#0" expanded="false" />
-            <element signature="e#394#395#0" expanded="false" />
-            <element signature="e#440#441#0" expanded="false" />
-            <element signature="e#471#472#0" expanded="false" />
-            <element signature="e#530#531#0" expanded="false" />
-            <element signature="e#570#571#0" expanded="false" />
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#652#653#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
-            <element signature="e#742#743#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/KolmogorovSmirnovTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#188#189#0" expanded="false" />
-            <element signature="e#250#251#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/ISimilarityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Input/ParsingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Input/Problem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -927,6 +956,7 @@
         <state relative-caret-position="756">
           <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#210#211#0" expanded="false" />
             <element signature="e#238#239#0" expanded="false" />
             <element signature="e#284#285#0" expanded="false" />
@@ -968,6 +998,7 @@
         <state relative-caret-position="567">
           <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#210#211#0" expanded="false" />
             <element signature="e#238#239#0" expanded="false" />
             <element signature="e#284#285#0" expanded="false" />
@@ -988,14 +1019,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/comp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Input/comp.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12579">
@@ -1008,16 +1032,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/SetsSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/SetsSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="e#359#360#0" expanded="false" />
-            <element signature="e#391#392#0" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,6 +1081,8 @@
             <element signature="imports" expanded="true" />
             <element signature="method#calculatePValueSimilarityMatrix#0;class#DSC#0" expanded="false" />
             <element signature="method#significanceLevelThreshold#0;class#DSC#0" expanded="false" />
+            <element signature="method#transitivityCheck#0;class#DSC#0" expanded="false" />
+            <element signature="method#buildDisjunctiveSets#0;class#DSC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,6 +1108,7 @@
         <state relative-caret-position="567">
           <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#210#211#0" expanded="false" />
             <element signature="e#238#239#0" expanded="false" />
             <element signature="e#284#285#0" expanded="false" />
@@ -1107,14 +1129,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/comp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Input/comp.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12579">
@@ -1127,16 +1142,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/SetsSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/SetsSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="e#359#360#0" expanded="false" />
-            <element signature="e#391#392#0" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,6 +1191,8 @@
             <element signature="imports" expanded="true" />
             <element signature="method#calculatePValueSimilarityMatrix#0;class#DSC#0" expanded="false" />
             <element signature="method#significanceLevelThreshold#0;class#DSC#0" expanded="false" />
+            <element signature="method#transitivityCheck#0;class#DSC#0" expanded="false" />
+            <element signature="method#buildDisjunctiveSets#0;class#DSC#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1189,14 +1201,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/TEST/Animal.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TEST/Person.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Input/AlgorithmDeserializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12096">
@@ -1220,14 +1224,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/comp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Input/comp.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.0-M4/junit-platform-commons-1.0.0-M4.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1265,10 +1262,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#188#189#0" expanded="false" />
-            <element signature="e#250#251#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,6 +1296,7 @@
         <state relative-caret-position="756">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#210#211#0" expanded="false" />
             <element signature="e#238#239#0" expanded="false" />
             <element signature="e#284#285#0" expanded="false" />
@@ -1339,61 +1334,131 @@
             <element signature="e#652#653#0" expanded="false" />
             <element signature="e#700#701#0" expanded="false" />
             <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#848#849#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/SetsSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Input/AlgorithmRankPair.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#359#360#0" expanded="false" />
-            <element signature="e#391#392#0" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/AlgorithmRankPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="189">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Input/AlgoMeanPair.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Output/ProblemSolutions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/DSC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="116" column="24" lean-forward="false" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+        <state relative-caret-position="373">
+          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#calculatePValueSimilarityMatrix#0;class#DSC#0" expanded="false" />
-            <element signature="method#significanceLevelThreshold#0;class#DSC#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DSC/DSCTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="398" column="54" lean-forward="false" selection-start-line="398" selection-start-column="54" selection-end-line="398" selection-end-column="54" />
+        <state relative-caret-position="357">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="340" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Output/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Output/AlgorithmRank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Output/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/SetsSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding>
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/AlgoMeanPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#387#388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DSC/DSC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="128" column="22" lean-forward="false" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#calculatePValueSimilarityMatrix#0;class#DSC#0" expanded="false" />
+            <element signature="method#significanceLevelThreshold#0;class#DSC#0" expanded="false" />
+            <element signature="method#transitivityCheck#0;class#DSC#0" expanded="false" />
+            <element signature="method#buildDisjunctiveSets#0;class#DSC#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ResponseHandler/ResponseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ResponseHandler/ResponseHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="297" column="8" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="72" />
+          <folding>
+            <element signature="e#29834#29835#0" expanded="true" />
+            <element signature="e#29913#29914#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
