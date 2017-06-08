@@ -8,7 +8,7 @@ import org.apache.commons.math3.util.CombinatoricsUtils;
 
 import java.util.*;
 
-public class DSC
+public class DSCAlgorithm
 {
     private RealMatrix calculatePValueSimilarityMatrix(ISimilarityTest test, Request data, int problemNumber)
     {
@@ -110,10 +110,10 @@ public class DSC
         return returnSets;
     }
 
-    public Map<Algorithm, Double> ranking(Request data, int problemNumber)
+    public Map<Algorithm, Double> ranking(Request data, int problemNumber, ISimilarityTest test)
     {
         //p-values between algorithm pairs
-        RealMatrix m = this.calculatePValueSimilarityMatrix(new KolmogorovSmirnovTest(), data, problemNumber);
+        RealMatrix m = this.calculatePValueSimilarityMatrix(test, data, problemNumber);
         //threshold limit
         double alphaLimit = data.getAlpha()/CombinatoricsUtils.binomialCoefficient(data.getNumberOfAlgorithms(), 2);
         //computing threshold
@@ -167,7 +167,7 @@ public class DSC
                 sameMeanList.add(ls.remove(0));
                 while (!ls.isEmpty() && sameMeanList.get(0).getMean() == ls.get(0).getMean())
                 {
-                    sameMeanList.add(ls.get(0));
+                    sameMeanList.add(ls.remove(0));
                 }
 
                 if(sameMeanList.size()==1)
@@ -197,5 +197,4 @@ public class DSC
         int min = (from*(from+1))/2;
         return max-min;
     }
-
 }

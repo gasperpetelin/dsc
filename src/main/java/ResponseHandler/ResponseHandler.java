@@ -1,7 +1,10 @@
 package ResponseHandler;
 
 
-import DSC.DSC;
+import DSC.DSCAlgorithm;
+import DSC.ISimilarityTest;
+import DSC.Tests.AndersonDarlingTest;
+import DSC.Tests.KolmogorovSmirnovTest;
 import Input.Algorithm;
 import Input.Request;
 import JsonParsing.Parsing;
@@ -18,7 +21,31 @@ public class ResponseHandler
     public static String generateResponse(String request)
     {
         Request data = Parsing.getRequest(request);
-        DSC dsc = new DSC();
+        DSCAlgorithm dscAlgorithm = new DSCAlgorithm();
+
+        //Changing test based on input
+        ISimilarityTest test = null;
+        if(data.getMethod() == null)
+        {
+            test = new KolmogorovSmirnovTest();
+        }
+        else
+        {
+            switch (data.getMethod())
+            {
+                case "AD":
+                case "AndersonDarling":
+                    test = new AndersonDarlingTest();
+                    break;
+                case "KS":
+                case "KolmogorovSmirnov":
+                    test = new KolmogorovSmirnovTest();
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid method argument");
+            }
+        }
+
 
         Method m = new Method(data.getMethod(), data.getAlpha());
         //TODO correct parametric test initialization
@@ -27,7 +54,7 @@ public class ResponseHandler
         {
             String problemName = data.getAlgorithm(0).getProblem(i).getName();
             ProblemSolutions s = new ProblemSolutions(problemName);
-            Map<Algorithm, Double> map = dsc.ranking(data, i);
+            Map<Algorithm, Double> map = dscAlgorithm.ranking(data, i, test);
             map.forEach((key, value) -> s.addAlgorithm(new AlgorithmRank(key.getName(), value)));
             r.addProblem(s);
         }
