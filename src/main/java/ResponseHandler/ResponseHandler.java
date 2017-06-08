@@ -49,7 +49,7 @@ public class ResponseHandler
 
         Method m = new Method(data.getMethod(), data.getAlpha());
         //TODO correct parametric test initialization
-        Response r = new Response(data.getNumberOfAlgorithms(), 0, m);
+        Response r = new Response(data.getNumberOfAlgorithms(), 0 /*parametric_tests initialization*/, m);
         for (int i = 0; i < data.getAlgorithm(0).getNumberOfProblems(); i++)
         {
             String problemName = data.getAlgorithm(0).getProblem(i).getName();
