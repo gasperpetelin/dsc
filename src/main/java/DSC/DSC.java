@@ -70,23 +70,21 @@ public class DSC
 
     private List<Set<Algorithm>> buildDisjunctiveSets(List<Algorithm> algorithms, RealMatrix connectionMatrix)
     {
-        List<Integer> allAlgorithms = new ArrayList<Integer>();
+        List<Integer> allAlgorithms = new ArrayList<>();
         for (int i = 0; i < algorithms.size(); i++)
         {
             allAlgorithms.add(i);
         }
 
-        List<Set<Integer>> sets = new ArrayList<Set<Integer>>();
+        List<Set<Integer>> sets = new ArrayList<>();
         while (allAlgorithms.size()!=0)
         {
             int algo = allAlgorithms.remove(0);
-            Set<Integer> s = new HashSet<Integer>();
+            Set<Integer> s = new HashSet<>();
             for (int i = 0; i < algorithms.size(); i++)
             {
                 if(i==algo)
-                {
                     s.add(algo);
-                }
                 else
                 {
                     if(connectionMatrix.getEntry(algo, i)==1)
@@ -94,15 +92,15 @@ public class DSC
                         allAlgorithms.remove(new Integer(i));
                         s.add(i);
                     }
-
                 }
             }
             sets.add(s);
         }
-        List<Set<Algorithm>> returnSets = new ArrayList<Set<Algorithm>>();
+
+        List<Set<Algorithm>> returnSets = new ArrayList<>();
         for(Set<Integer> s:sets)
         {
-            Set<Algorithm> rs = new HashSet<Algorithm>();
+            Set<Algorithm> rs = new HashSet<>();
             for (int i:s)
             {
                 rs.add(algorithms.get(i));

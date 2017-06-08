@@ -51,7 +51,7 @@ public class Request
 
     public HashMap<Algorithm, Double> getMeans(int problem)
     {
-        HashMap<Algorithm, Double> map = new HashMap<Algorithm, Double>();
+        HashMap<Algorithm, Double> map = new HashMap<>();
         for (Algorithm a:this.data)
         {
             map.put(a, a.getMean(problem));

@@ -1,8 +1,6 @@
 package Input;
 
 
-import java.util.List;
-
 public class Problem
 {
     private String name;
@@ -42,14 +40,6 @@ public class Problem
         return sum/this.data.length;
     }
 
-    @Override
-    public String toString()
-    {
-        StringBuilder b = new StringBuilder(this.name + " ");
-        for(double d : this.data)
-            b.append(d + " ");
-        return b.toString();
-    }
 
 
 
