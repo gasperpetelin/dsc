@@ -1,7 +1,7 @@
 ### TODO
 
-AndersonDarlingTest - unstandardized test (vrača p value med 0 in neskončno)
-ResponseHandler - pravilna nastavitev vrednosti parametric_tests v JSON odgovoru
+* AndersonDarlingTest - unstandardized test (vrača p value med 0 in neskončno)
+* ResponseHandler - pravilna nastavitev vrednosti parametric_tests v JSON odgovoru
 
 ### Uporaba za rangiranje algoritmov
 
