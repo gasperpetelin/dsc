@@ -3,6 +3,7 @@ package JsonParsing;
 import Input.Algorithm;
 import Input.Problem;
 import Input.Request;
+import Output.Response;
 import com.google.gson.Gson;
 
 public class Parsing
@@ -20,5 +21,10 @@ public class Parsing
     static public Request getRequest(String json)
     {
         return new Gson().fromJson(json, Request.class);
+    }
+
+    static public Response getResponse(String json)
+    {
+        return new Gson().fromJson(json, Response.class);
     }
 }

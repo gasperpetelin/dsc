@@ -47,6 +47,18 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/jsc.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>com.datumbox</groupId>
+            <artifactId>datumbox-framework-common</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datumbox</groupId>
+            <artifactId>datumbox-framework-core</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+
+
     </dependencies>
 
 

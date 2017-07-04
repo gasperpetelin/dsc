@@ -28,4 +28,19 @@ public class Response
     {
         this.problems.add(problem);
     }
+
+    public List<ProblemSolutions> getProblems()
+    {
+        return this.problems;
+    }
+
+    public int getNumberOfAlgorithms()
+    {
+        return numberOfAlgorithms;
+    }
+
+    public Method getMethod()
+    {
+        return this.method;
+    }
 }
