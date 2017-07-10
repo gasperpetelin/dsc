@@ -14,6 +14,7 @@ import org.apache.commons.math3.stat.inference.OneWayAnova;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
 public class DSC2Algorithm
@@ -21,7 +22,6 @@ public class DSC2Algorithm
     public double calculatePValue(Response input)
     {
         DataHolder dh = new DataHolder(input);
-        List<Integer> normalityTestArray = new ArrayList<>();
 
         RealMatrix m = MatrixUtils.createRealMatrix(input.getProblems().size(), input.getNumberOfAlgorithms());
         for(int i = 0; i<input.getProblems().size(); i++)
@@ -32,15 +32,18 @@ public class DSC2Algorithm
             }
         }
 
+
+        boolean normalityTest = true;
         for (int i = 0; i < input.getNumberOfAlgorithms(); i++)
         {
             Double[] testArray = dh.getAlgorithmsData(i);
             double avg = Arrays.stream(testArray).mapToDouble(d->d).average().getAsDouble();
+            DoubleSummaryStatistics s = Arrays.stream(testArray).mapToDouble(d->d).summaryStatistics();
+            NormalDistribution nd = new NormalDistribution(avg,5 /*TODO correct parameters*/);
+            double[] testArrayDouble = Arrays.stream(testArray).mapToDouble(d->d).toArray();
             //TODO move bool flag here
-            if (new KolmogorovSmirnovTest().kolmogorovSmirnovStatistic(new NormalDistribution(avg,5 /*TODO correct parameters*/), Arrays.stream(testArray).mapToDouble(d->d).toArray()) < input.getMethod().getAlpha())
-                normalityTestArray.add(0);
-            else
-                normalityTestArray.add(1);
+            if (new KolmogorovSmirnovTest().kolmogorovSmirnovStatistic(nd, testArrayDouble) < input.getMethod().getAlpha())
+                normalityTest = false;
         }
 
 
@@ -55,15 +58,6 @@ public class DSC2Algorithm
         }
 
         boolean levensTest = LevenesIndependentSamples.testVariances(transposeDataCollection, input.getMethod().getAlpha());
-        boolean normalityTest = true;
-        for(Integer i:normalityTestArray)
-        {
-            if(i==0)
-            {
-                normalityTest = false;
-                break;
-            }
-        }
 
         if(levensTest && normalityTest)
         {
