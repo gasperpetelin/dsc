@@ -130,14 +130,23 @@ public class DSCAlgorithm
 
         if(this.transitivityCheck(m))
         {
+            List<Integer> temp = new ArrayList<>();
+            for (int i = 0; i < groups.get(0).getAlgorithms().size(); i++) {
+                temp.add(i+1);
+            }
+
             int max = groups.get(0).getAlgorithms().size();
             groups.get(0).rank = (double)this.naturalNumberSum(1, max)/max;
             if(groups.size()>1)
             {
                 for (int i = 1; i < groups.size() ; i++)
                 {
-                    int from = groups.get(i-1).getAlgorithms().size() + 1;
-                    int to = groups.get(i-1).getAlgorithms().size() + groups.get(i).getAlgorithms().size();
+                    int from = temp.get(temp.size()-1) + 1;
+                    int to = temp.get(temp.size()-1) + groups.get(i).getAlgorithms().size();
+                    temp = new ArrayList<>();
+                    for (int j = from; j <= to ; j++) {
+                        temp.add(j);
+                    }
                     int sum = this.naturalNumberSum(from, to);
                     groups.get(i).rank = (double) sum/groups.get(i).getAlgorithms().size();
                 }
