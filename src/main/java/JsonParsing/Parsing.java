@@ -18,10 +18,7 @@ public class Parsing
         return new Gson().fromJson(json, Algorithm.class);
     }
 
-    static public Request getRequest(String json)
-    {
-        return new Gson().fromJson(json, Request.class);
-    }
+    static public Request getRequest(String json) {return new Gson().fromJson(json, Request.class);}
 
     static public Response getResponse(String json)
     {

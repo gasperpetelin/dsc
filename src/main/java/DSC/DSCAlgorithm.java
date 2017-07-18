@@ -1,9 +1,19 @@
 package DSC;
 
+import DSC.NormalityTest.INormalityTest;
+import DSC.Tests.ISimilarityTest;
 import Input.Algorithm;
 import Input.Request;
+import Output.AlgorithmRank;
+import Output.ProblemSolutions;
+import Output.Response;
+import com.datumbox.framework.common.dataobjects.FlatDataCollection;
+import com.datumbox.framework.common.dataobjects.TransposeDataCollection;
+import com.datumbox.framework.core.statistics.parametrics.independentsamples.LevenesIndependentSamples;
+import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
+import org.apache.commons.math3.stat.inference.KolmogorovSmirnovTest;
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
 import java.util.*;
@@ -205,5 +215,41 @@ public class DSCAlgorithm
         from--;
         int min = (from*(from+1))/2;
         return max-min;
+    }
+
+    public boolean parametricTests(Response response, INormalityTest normalityTest)
+    {
+        Map<String, List<Double>> results = new HashMap<>();
+
+        for(AlgorithmRank rank:response.getProblems().get(0).getResult())
+        {
+            results.put(rank.getAlgorithmName(), new ArrayList<>());
+        }
+
+        for(ProblemSolutions pr:response.getProblems())
+        {
+            for(AlgorithmRank r:pr.getResult())
+            {
+                results.get(r.getAlgorithmName()).add(r.getRank());
+            }
+        }
+
+        for (Map.Entry<String, List<Double>> entry : results.entrySet())
+        {
+            double testResult = normalityTest.getPValue(entry.getValue().stream().mapToDouble(d->d).toArray());
+            if (testResult < response.getMethod().getAlpha())
+            {
+                return false;
+            }
+        }
+
+        TransposeDataCollection transposeDataCollection = new TransposeDataCollection();
+
+        for (Map.Entry<String, List<Double>> entry : results.entrySet())
+        {
+            transposeDataCollection.put(entry.getKey(), new FlatDataCollection(Arrays.asList(entry.getValue().toArray())));
+        }
+
+        return LevenesIndependentSamples.testVariances(transposeDataCollection, response.getMethod().getAlpha());
     }
 }

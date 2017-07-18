@@ -14,6 +14,11 @@ public class DataHolder
         this.input = input;
     }
 
+    public int getNumberOfAlgorithms()
+    {
+        return this.input.getNumberOfAlgorithms();
+    }
+
     public Double[] getAlgorithmsData(int algorithm)
     {
         List<Double> ls = new ArrayList<>();

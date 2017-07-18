@@ -1,4 +1,4 @@
-package DSC;
+package DSC.Tests;
 
 
 public interface ISimilarityTest

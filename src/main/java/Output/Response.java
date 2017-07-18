@@ -16,11 +16,10 @@ public class Response
     private int parametricTest;
     private Method method;
 
-    public Response(int numberOfAlgorithms, int parametricTest, Method method)
+    public Response(int numberOfAlgorithms, Method method)
     {
         this.problems = new ArrayList<>();
         this.numberOfAlgorithms = numberOfAlgorithms;
-        this.parametricTest = parametricTest;
         this.method = method;
     }
 
@@ -43,4 +42,12 @@ public class Response
     {
         return this.method;
     }
+
+    public void setParametricTest(int parametricTest) {
+        this.parametricTest = parametricTest;
+    }
+
+    public int getParametricTest() { return this.parametricTest; }
+
+
 }

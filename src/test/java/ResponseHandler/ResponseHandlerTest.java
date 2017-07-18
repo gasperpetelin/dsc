@@ -295,7 +295,8 @@ class ResponseHandlerTest
     @Test
     void generateResponse()
     {
-        ResponseHandler.generateResponse(this.customJsonwith21Examples);
+        String r = ResponseHandler.generateResponse(this.customJsonwith21Examples);
+        int n = 34;
     }
 
 }

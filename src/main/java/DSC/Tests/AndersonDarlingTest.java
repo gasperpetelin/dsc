@@ -1,6 +1,5 @@
 package DSC.Tests;
 
-import DSC.ISimilarityTest;
 import de.lmu.ifi.dbs.elki.math.statistics.tests.StandardizedTwoSampleAndersonDarlingTest;
 
 public class AndersonDarlingTest implements ISimilarityTest
@@ -9,7 +8,7 @@ public class AndersonDarlingTest implements ISimilarityTest
     @Override
     public double getPValue(double[] array1, double[] array2)
     {
-        //TODO uses unstandardized test
+        //TODO uses unstandardized getPValue
         return test.unstandardized(array1, array2);
     }
 }

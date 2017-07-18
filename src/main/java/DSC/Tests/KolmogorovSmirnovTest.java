@@ -1,6 +1,5 @@
 package DSC.Tests;
 
-import DSC.ISimilarityTest;
 import jsc.independentsamples.SmirnovTest;
 
 public class KolmogorovSmirnovTest implements ISimilarityTest

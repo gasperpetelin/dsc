@@ -9,12 +9,6 @@ public class ProblemSolutions
     private String problemName;
     private List<AlgorithmRank> result;
 
-    public ProblemSolutions(String problemName, List<AlgorithmRank> result)
-    {
-        this.problemName = problemName;
-        this.result = result;
-    }
-
     public ProblemSolutions(String problemName)
     {
         this.problemName = problemName;
