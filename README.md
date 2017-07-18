@@ -7,7 +7,7 @@
 * FriedmanAlign test ni implementiran
 * ImanDavenport test ni implementiran
 * Pri RepeatedMesureAnova je trenutno implementiran kot OneWayAnova
-* Testi vrečejo drugačne vrednosti kot testi v R 
+* Testi vračejo drugačne vrednosti kot testi v R 
 
 ### Uporaba za rangiranje algoritmov
 
@@ -57,7 +57,7 @@ String response = ResponseHandler.calculatePValue(inputJson);
 }
 ```
 
-## Izhod - JSON
+#### Izhod - JSON
 
 ```json
 {
