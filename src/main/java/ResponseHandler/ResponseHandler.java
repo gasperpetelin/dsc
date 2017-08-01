@@ -3,8 +3,8 @@ package ResponseHandler;
 
 import DSC.DSCAlgorithm;
 import DSC.NormalityTest.KolmogorovSmirnov;
-import DSC.Tests.ISimilarityTest;
 import DSC.Tests.AndersonDarlingTest;
+import DSC.Tests.ISimilarityTest;
 import DSC.Tests.KolmogorovSmirnovTest;
 import DSC2.DSC2Algorithm;
 import DSC2.INonParametricTest;
@@ -14,7 +14,6 @@ import DSC2.Tests.RepeatedMeasureAnova;
 import DSC2.Tests.WilcoxonSignedRank;
 import Input.Algorithm;
 import Input.Request;
-import JsonParsing.Parsing;
 import Output.AlgorithmRank;
 import Output.Method;
 import Output.ProblemSolutions;
@@ -29,8 +28,12 @@ public class ResponseHandler
 {
     public static String calculatePValue(String request)
     {
-        Response data = Parsing.getResponse(request);
+        Response data = new Gson().fromJson(request, Response.class);
         INonParametricTest test = null;
+
+
+        //TODO remove
+        data.getMethod().setName("Friedman");
 
         //Test if only 2 algorithms
         if(data.getNumberOfAlgorithms()==2)
@@ -106,9 +109,9 @@ public class ResponseHandler
         return new Gson().toJson(out);
     }
 
-    public static String generateResponse(String request)
+    public static String calculateRank(String request)
     {
-        Request data = Parsing.getRequest(request);
+        Request data = new Gson().fromJson(request, Request.class);
         DSCAlgorithm dscAlgorithm = new DSCAlgorithm();
 
         //Changing getPValue based on input
@@ -136,7 +139,6 @@ public class ResponseHandler
 
 
         Method m = new Method(data.getMethod(), data.getAlpha());
-        //TODO correct parametric getPValue initialization
         Response r = new Response(data.getNumberOfAlgorithms(), m);
         for (int i = 0; i < data.getAlgorithm(0).getNumberOfProblems(); i++)
         {

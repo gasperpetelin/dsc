@@ -12,6 +12,8 @@ public class Method
         this.alpha = alpha;
     }
 
+    public void setName(String name){this.name = name;}
+
     public String getName()
     {
         return name;

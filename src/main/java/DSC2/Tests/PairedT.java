@@ -2,6 +2,8 @@ package DSC2.Tests;
 
 import DSC2.INonParametricTest;
 import org.apache.commons.math3.stat.inference.TTest;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public class PairedT implements INonParametricTest
 {
     @Override
@@ -15,5 +17,11 @@ public class PairedT implements INonParametricTest
             d2[i] = data[i][1];
         }
         return new TTest().pairedTTest(d1,d2);
+    }
+
+    @Override
+    public double getTSValue(double[][] data)
+    {
+        throw new NotImplementedException();
     }
 }

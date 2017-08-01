@@ -1,11 +1,12 @@
-import Input.Problem;
 import ResponseHandler.ResponseHandler;
-import com.google.gson.Gson;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.stat.inference.KolmogorovSmirnovTest;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.DoubleSummaryStatistics;
 
 public class main
 {
@@ -908,13 +909,24 @@ public class main
             "}";
 
 
+    public static String readFile(int fileNumber) throws IOException
+    {
+        return new String(Files.readAllBytes(Paths.get("C:\\Users\\Gasper\\Desktop\\jsonfiles\\" + fileNumber + ".json")), StandardCharsets.UTF_8);
+    }
+
     public static void main(String []args)
     {
-        String s = ResponseHandler.generateResponse(json2);
+
+
+        String s = null;
+        try {
+            s = ResponseHandler.calculateRank(readFile(24));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(s);
         String s1 = ResponseHandler.calculatePValue(s);
         System.out.println(s1);
-        //getPValue();
     }
 
     public static void test()
@@ -930,24 +942,5 @@ public class main
         double d = new KolmogorovSmirnovTest().kolmogorovSmirnovTest(nd, testArrayDouble);
         System.out.println(sdf);
         System.out.println(d);
-    }
-
-    public static double avg(Double[] data)
-    {
-        return Arrays.stream(data).mapToDouble(d->d).average().getAsDouble();
-    }
-
-    public static double var(Double[] data)
-    {
-        double mean = main.avg(data);
-        double temp = 0;
-        for(double a :data)
-            temp += (a-mean)*(a-mean);
-        return temp/(data.length-1);
-    }
-
-    public static double std(Double[] data)
-    {
-        return Math.sqrt(main.var(data));
     }
 }

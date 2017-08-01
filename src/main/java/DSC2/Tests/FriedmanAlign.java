@@ -9,4 +9,9 @@ public class FriedmanAlign implements INonParametricTest
     public double getPValue(double[][] data) {
         throw new NotImplementedException();
     }
+
+    @Override
+    public double getTSValue(double[][] data) {
+        throw new NotImplementedException();
+    }
 }

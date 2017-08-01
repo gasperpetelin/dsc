@@ -10,10 +10,8 @@ import Output.Response;
 import com.datumbox.framework.common.dataobjects.FlatDataCollection;
 import com.datumbox.framework.common.dataobjects.TransposeDataCollection;
 import com.datumbox.framework.core.statistics.parametrics.independentsamples.LevenesIndependentSamples;
-import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
-import org.apache.commons.math3.stat.inference.KolmogorovSmirnovTest;
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
 import java.util.*;

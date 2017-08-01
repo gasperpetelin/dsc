@@ -13,6 +13,11 @@ public class RepeatedMeasureAnova implements INonParametricTest
     @Override
     public double getPValue(double[][] data)
     {
+        return new OneWayAnova().anovaPValue(this.dataTransformation(data));
+    }
+
+    private List<double[]> dataTransformation(double[][]data)
+    {
         List<double[]> d = new ArrayList<>();
         for (int i = 0; i < data[0].length; i++)
         {
@@ -23,6 +28,12 @@ public class RepeatedMeasureAnova implements INonParametricTest
             }
             d.add(ls);
         }
-        return new OneWayAnova().anovaPValue(d);
+        return d;
+    }
+
+    @Override
+    public double getTSValue(double[][] data)
+    {
+        return new OneWayAnova().anovaFValue(this.dataTransformation(data));
     }
 }
