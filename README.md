@@ -1,16 +1,27 @@
 ### TODO
 
+#### Prvi algoritem 
 * AndersonDarlingTest - unstandardized test (vrača p value med 0 in neskončno). Moral bi verjetno med 0 in 1.
-* ResponseHandler - pravilna nastavitev vrednosti parametric_tests v JSON odgovoru.
+
+#### Drugi algoritem
+* FriedmanAlign test ni implementiran
+* ImanDavenport test ni implementiran
+* Pri RepeatedMesureAnova je trenutno implementiran kot OneWayAnova
+* Testi vračejo drugačne vrednosti kot testi v R 
 
 ### Uporaba za rangiranje algoritmov
 
-
 ```java
-String response = ResponseHandler.generateResponse(inputJson);
+String response = ResponseHandler.calculateRank(inputJson);
 ```
 
-### Vhod - JSON
+### Uporaba za potrjevanje hipoteze
+
+```java
+String response = ResponseHandler.calculatePValue(inputJson);
+```
+### Prvi algoritem
+#### Vhod - JSON
 
 ```json
 {
@@ -46,7 +57,7 @@ String response = ResponseHandler.generateResponse(inputJson);
 }
 ```
 
-### Izhod - JSON
+#### Izhod - JSON
 
 ```json
 {
