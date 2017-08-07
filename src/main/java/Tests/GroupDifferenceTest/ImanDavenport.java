@@ -1,9 +1,8 @@
-package DSC2.Tests;
+package Tests.GroupDifferenceTest;
 
-import DSC2.INonParametricTest;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class ImanDavenport implements INonParametricTest
+public class ImanDavenport implements IGroupDifferenceTest
 {
     @Override
     public double getPValue(double[][] data) {

@@ -1,7 +1,7 @@
-package DSC2;
+package Tests.GroupDifferenceTest;
 
 
-public interface INonParametricTest
+public interface IGroupDifferenceTest
 {
     double getPValue(double[][] data);
     double getTSValue(double[][]data);

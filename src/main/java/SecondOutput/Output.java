@@ -1,9 +1,13 @@
 package SecondOutput;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Output
 {
     private String message;
+    @SerializedName("p_value")
     private double pValue;
+    @SerializedName("t")
     private double tValue;
     private Method method;
 

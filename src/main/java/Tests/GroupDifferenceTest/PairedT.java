@@ -1,14 +1,10 @@
-package DSC2.Tests;
+package Tests.GroupDifferenceTest;
 
-
-import DSC2.INonParametricTest;
-import org.apache.commons.math3.stat.inference.WilcoxonSignedRankTest;
+import org.apache.commons.math3.stat.inference.TTest;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-
-public class WilcoxonSignedRank implements INonParametricTest
+public class PairedT implements IGroupDifferenceTest
 {
-
     @Override
     public double getPValue(double[][] data)
     {
@@ -19,7 +15,7 @@ public class WilcoxonSignedRank implements INonParametricTest
             d1[i] = data[i][0];
             d2[i] = data[i][1];
         }
-        return new WilcoxonSignedRankTest().wilcoxonSignedRank(d1,d2);
+        return new TTest().pairedTTest(d1,d2);
     }
 
     @Override

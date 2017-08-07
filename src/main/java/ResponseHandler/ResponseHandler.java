@@ -2,16 +2,16 @@ package ResponseHandler;
 
 
 import DSC.DSCAlgorithm;
-import DSC.NormalityTest.KolmogorovSmirnov;
-import DSC.Tests.AndersonDarlingTest;
-import DSC.Tests.ISimilarityTest;
-import DSC.Tests.KolmogorovSmirnovTest;
+import Tests.NormalityTests.KolmogorovSmirnov;
+import Tests.SimilarityTest.AndersonDarlingTest;
+import Tests.SimilarityTest.ISimilarityTest;
+import Tests.SimilarityTest.KolmogorovSmirnovTest;
 import DSC2.DSC2Algorithm;
-import DSC2.INonParametricTest;
-import DSC2.Tests.Friedman;
-import DSC2.Tests.PairedT;
-import DSC2.Tests.RepeatedMeasureAnova;
-import DSC2.Tests.WilcoxonSignedRank;
+import Tests.GroupDifferenceTest.IGroupDifferenceTest;
+import Tests.GroupDifferenceTest.Friedman;
+import Tests.GroupDifferenceTest.PairedT;
+import Tests.GroupDifferenceTest.RepeatedMeasureAnova;
+import Tests.GroupDifferenceTest.WilcoxonSignedRank;
 import Input.Algorithm;
 import Input.Request;
 import Output.AlgorithmRank;
@@ -20,6 +20,7 @@ import Output.ProblemSolutions;
 import Output.Response;
 import SecondOutput.Output;
 import com.google.gson.Gson;
+import javafx.util.Pair;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.Map;
@@ -29,8 +30,7 @@ public class ResponseHandler
     public static String calculatePValue(String request)
     {
         Response data = new Gson().fromJson(request, Response.class);
-        INonParametricTest test = null;
-
+        IGroupDifferenceTest test = null;
 
         //TODO remove
         data.getMethod().setName("Friedman");
@@ -100,12 +100,12 @@ public class ResponseHandler
         }
 
         DSC2Algorithm dsc2Algorithm = new DSC2Algorithm();
-        double pvalue = dsc2Algorithm.calculatePValue(data, test);
+        Pair<Double, Double> p_t_value = dsc2Algorithm.calculatePValue(data, test);
         Output out = null;
-        if(pvalue > data.getMethod().getAlpha())
-            out = Output.confirmed(pvalue, 0, data.getMethod().getName(), data.getMethod().getAlpha());
+        if(p_t_value.getKey() > data.getMethod().getAlpha())
+            out = Output.confirmed(p_t_value.getKey(), p_t_value.getValue(), data.getMethod().getName(), data.getMethod().getAlpha());
         else
-            out = Output.rejected(pvalue, 0, data.getMethod().getName(), data.getMethod().getAlpha());
+            out = Output.rejected(p_t_value.getKey(), p_t_value.getValue(), data.getMethod().getName(), data.getMethod().getAlpha());
         return new Gson().toJson(out);
     }
 

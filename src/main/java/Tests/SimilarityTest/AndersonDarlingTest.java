@@ -1,4 +1,4 @@
-package DSC.Tests;
+package Tests.SimilarityTest;
 
 import de.lmu.ifi.dbs.elki.math.statistics.tests.StandardizedTwoSampleAndersonDarlingTest;
 

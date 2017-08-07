@@ -19,21 +19,6 @@ public class Algorithm
         return name;
     }
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    public List<Problem> getProblems()
-    {
-        return problems;
-    }
-
-    public void setProblems(List<Problem> problems)
-    {
-        this.problems = problems;
-    }
-
     public int getNumberOfProblems()
     {
         return problems.size();

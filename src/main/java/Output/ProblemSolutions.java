@@ -15,11 +15,6 @@ public class ProblemSolutions
         this.result = new ArrayList<>();
     }
 
-    public String getProblemName()
-    {
-        return problemName;
-    }
-
     public List<AlgorithmRank> getResult()
     {
         return result;

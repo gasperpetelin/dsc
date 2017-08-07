@@ -1,4 +1,4 @@
-package DSC.NormalityTest;
+package Tests.NormalityTests;
 
 public interface INormalityTest
 {

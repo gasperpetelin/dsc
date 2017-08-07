@@ -1,11 +1,9 @@
-package DSC2.Tests;
+package Tests.GroupDifferenceTest;
 
-import DSC2.INonParametricTest;
+import Tests.GroupDifferenceTest.Implementations.FriedmanOriginal;
 import jsc.datastructures.MatchedData;
-import jsc.distributions.FriedmanM;
-import jsc.relatedsamples.FriedmanTest;
 
-public class Friedman implements INonParametricTest
+public class Friedman implements IGroupDifferenceTest
 {
     @Override
     public double getPValue(double[][] data)

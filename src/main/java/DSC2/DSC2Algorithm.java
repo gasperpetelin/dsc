@@ -1,12 +1,14 @@
 package DSC2;
 
+import Tests.GroupDifferenceTest.IGroupDifferenceTest;
 import Output.Response;
+import javafx.util.Pair;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 
 public class DSC2Algorithm
 {
-    public double calculatePValue(Response input, INonParametricTest nonParametricTest)
+    public Pair<Double, Double> calculatePValue(Response input, IGroupDifferenceTest nonParametricTest)
     {
         RealMatrix m = MatrixUtils.createRealMatrix(input.getProblems().size(), input.getNumberOfAlgorithms());
         for(int i = 0; i<input.getProblems().size(); i++)
@@ -16,7 +18,7 @@ public class DSC2Algorithm
                 m.setEntry(i, j, input.getProblems().get(i).getResult().get(j).getRank());
             }
         }
-        return nonParametricTest.getPValue(m.getData());
+        return new Pair<>(nonParametricTest.getPValue(m.getData()), nonParametricTest.getTSValue(m.getData()));
     }
 
 }

@@ -1,4 +1,4 @@
-package DSC.NormalityTest;
+package Tests.NormalityTests;
 
 
 import org.apache.commons.math3.distribution.NormalDistribution;

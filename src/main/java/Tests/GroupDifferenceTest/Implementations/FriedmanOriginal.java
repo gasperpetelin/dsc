@@ -1,4 +1,4 @@
-package DSC2.Tests;
+package Tests.GroupDifferenceTest.Implementations;
 
 import jsc.datastructures.MatchedData;
 import jsc.distributions.Beta;

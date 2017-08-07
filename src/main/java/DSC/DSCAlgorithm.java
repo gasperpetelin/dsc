@@ -1,7 +1,7 @@
 package DSC;
 
-import DSC.NormalityTest.INormalityTest;
-import DSC.Tests.ISimilarityTest;
+import Tests.NormalityTests.INormalityTest;
+import Tests.SimilarityTest.ISimilarityTest;
 import Input.Algorithm;
 import Input.Request;
 import Output.AlgorithmRank;

@@ -1,13 +1,12 @@
-package DSC2.Tests;
+package Tests.GroupDifferenceTest;
 
 
-import DSC2.INonParametricTest;
 import org.apache.commons.math3.stat.inference.OneWayAnova;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepeatedMeasureAnova implements INonParametricTest
+public class RepeatedMeasureAnova implements IGroupDifferenceTest
 {
     //TODO implementd oneway anova
     @Override
