@@ -1,7 +1,7 @@
 package Output;
 
 
-public class AlgorithmRank
+public class AlgorithmRank implements Comparable<AlgorithmRank>
 {
     private String algorithmName;
     private double rank;
@@ -20,5 +20,11 @@ public class AlgorithmRank
     public double getRank()
     {
         return rank;
+    }
+
+    @Override
+    public int compareTo(AlgorithmRank o)
+    {
+        return this.algorithmName.compareTo(o.algorithmName);
     }
 }

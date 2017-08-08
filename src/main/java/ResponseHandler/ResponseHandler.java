@@ -2,16 +2,7 @@ package ResponseHandler;
 
 
 import DSC.DSCAlgorithm;
-import Tests.NormalityTests.KolmogorovSmirnov;
-import Tests.SimilarityTest.AndersonDarlingTest;
-import Tests.SimilarityTest.ISimilarityTest;
-import Tests.SimilarityTest.KolmogorovSmirnovTest;
 import DSC2.DSC2Algorithm;
-import Tests.GroupDifferenceTest.IGroupDifferenceTest;
-import Tests.GroupDifferenceTest.Friedman;
-import Tests.GroupDifferenceTest.PairedT;
-import Tests.GroupDifferenceTest.RepeatedMeasureAnova;
-import Tests.GroupDifferenceTest.WilcoxonSignedRank;
 import Input.Algorithm;
 import Input.Request;
 import Output.AlgorithmRank;
@@ -19,9 +10,13 @@ import Output.Method;
 import Output.ProblemSolutions;
 import Output.Response;
 import SecondOutput.Output;
+import Tests.GroupDifferenceTest.*;
+import Tests.NormalityTests.KolmogorovSmirnov;
+import Tests.SimilarityTest.AndersonDarlingTest;
+import Tests.SimilarityTest.ISimilarityTest;
+import Tests.SimilarityTest.KolmogorovSmirnovTest;
 import com.google.gson.Gson;
 import javafx.util.Pair;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.Map;
 
@@ -31,9 +26,6 @@ public class ResponseHandler
     {
         Response data = new Gson().fromJson(request, Response.class);
         IGroupDifferenceTest test = null;
-
-        //TODO remove
-        data.getMethod().setName("Friedman");
 
         //Test if only 2 algorithms
         if(data.getNumberOfAlgorithms()==2)
@@ -75,12 +67,12 @@ public class ResponseHandler
                         break;
                     case "FA":
                     case "FriedmanAlign":
-                        //TODO implement
-                        throw new NotImplementedException();
+                        test = new FriedmanAlign();
+                        break;
                     case "ID":
                     case "ImanDavenport":
-                        //TODO implement
-                        throw new NotImplementedException();
+                        test = new ImanDavenport();
+                        break;
                     default:
                         throw new IllegalArgumentException("Invalid method argument");
                 }
@@ -101,6 +93,7 @@ public class ResponseHandler
 
         DSC2Algorithm dsc2Algorithm = new DSC2Algorithm();
         Pair<Double, Double> p_t_value = dsc2Algorithm.calculatePValue(data, test);
+        System.out.println(p_t_value.getKey());
         Output out = null;
         if(p_t_value.getKey() > data.getMethod().getAlpha())
             out = Output.confirmed(p_t_value.getKey(), p_t_value.getValue(), data.getMethod().getName(), data.getMethod().getAlpha());
@@ -114,7 +107,6 @@ public class ResponseHandler
         Request data = new Gson().fromJson(request, Request.class);
         DSCAlgorithm dscAlgorithm = new DSCAlgorithm();
 
-        //Changing getPValue based on input
         ISimilarityTest test = null;
         if(data.getMethod() == null)
         {
@@ -148,6 +140,8 @@ public class ResponseHandler
             map.forEach((key, value) -> s.addAlgorithm(new AlgorithmRank(key.getName(), value)));
             r.addProblem(s);
         }
+        //TODO
+        r.getMethod().setName("Friedman");
         r.setParametricTest(dscAlgorithm.parametricTests(r, new KolmogorovSmirnov()) ? 1 : 0);
         return new Gson().toJson(r);
     }

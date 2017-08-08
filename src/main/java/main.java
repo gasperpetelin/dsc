@@ -1,4 +1,5 @@
 import ResponseHandler.ResponseHandler;
+import jsc.util.Rank;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.stat.inference.KolmogorovSmirnovTest;
 
@@ -916,22 +917,29 @@ public class main
 
     public static void main(String []args)
     {
+        int[] arr = {1, 2, 3, 16, 18, 23, 24};
+        //int[] arr = {18};
 
-
-        String s = null;
-        try {
-            s = ResponseHandler.calculateRank(readFile(24));
-        } catch (IOException e) {
-            e.printStackTrace();
+        for(Integer i:arr)
+        {
+            System.out.println(i);
+            String s = null;
+            try {
+                s = ResponseHandler.calculateRank(readFile(i));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println(s);
+            String s1 = ResponseHandler.calculatePValue(s);
+            System.out.println(s1);
         }
-        System.out.println(s);
-        String s1 = ResponseHandler.calculatePValue(s);
-        System.out.println(s1);
+
+
     }
 
     public static void test()
     {
-        Double[] testArray = new Double[] { 3.0,4.0,2.0,6.0, 1.0};
+        Double[] testArray = new Double[] { 3.0, 4.0, 2.0, 6.0, 1.0};
         for (int i = 0; i <testArray.length ; i++) {
             testArray[i]+=1000;
         }
