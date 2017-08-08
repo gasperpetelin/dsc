@@ -1,19 +1,19 @@
 ### Veljavne vrednosti za metodo (algoritem 1)
 
-"AD"/"AndersonDarling"
-"KS"/"KolmogorovSmirnov"
+* AD/AndersonDarling
+* KS/KolmogorovSmirnov
 
 ### Veljavne vrednosti za metodo (algoritem 2)
 
 #### 2 algoritma
-"WSR"/"WilcoxonSignedRank"
-"PT"/"PairedT"
+* WSR/WilcoxonSignedRank
+* PT/PairedT
 
 #### več algoritmov
-"F"/"Friedman"
-"FA"/"FriedmanAlign"
-"ID"/"ImanDavenport"
-"ANOVA"/"RepeatedMeasureAnova"
+* F/Friedman
+* FA/FriedmanAlign
+* ID/ImanDavenport
+* ANOVA/RepeatedMeasureAnova
 
 ### TODO
 
