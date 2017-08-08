@@ -1,13 +1,27 @@
+### Veljavne vrednosti za metodo (algoritem 1)
+
+* AD/AndersonDarling
+* KS/KolmogorovSmirnov
+
+### Veljavne vrednosti za metodo (algoritem 2)
+
+#### 2 algoritma
+* WSR/WilcoxonSignedRank
+* PT/PairedT
+
+#### več algoritmov
+* F/Friedman
+* FA/FriedmanAlign
+* ID/ImanDavenport
+* ANOVA/RepeatedMeasureAnova
+
 ### TODO
 
 #### Prvi algoritem 
-* AndersonDarlingTest - unstandardized test (vrača p value med 0 in neskončno). Moral bi verjetno med 0 in 1.
+* AndersonDarlingTest - unstandardized test (vrača p value med 0 in neskončno). Moral bi med 0 in 1.
 
 #### Drugi algoritem
-* FriedmanAlign test ni implementiran
-* ImanDavenport test ni implementiran
 * Pri RepeatedMesureAnova je trenutno implementiran kot OneWayAnova
-* Testi vračejo drugačne vrednosti kot testi v R 
 
 ### Uporaba za rangiranje algoritmov
 
