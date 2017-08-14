@@ -18,12 +18,12 @@ public class WilcoxonSignedRank implements IGroupDifferenceTest
             d1[i] = data[i][0];
             d2[i] = data[i][1];
         }
-        return new WilcoxonSignedRankTest().wilcoxonSignedRank(d1,d2);
+        return new WilcoxonSignedRankTest().wilcoxonSignedRankTest(d1,d2, true);
     }
 
     @Override
     public double getTSValue(double[][] data)
     {
-        throw new NotImplementedException();
+        return 0;
     }
 }

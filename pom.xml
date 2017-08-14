@@ -47,9 +47,5 @@
             <artifactId>datumbox-framework-core</artifactId>
             <version>0.8.0</version>
         </dependency>
-
     </dependencies>
-
-
-    
 </project>
