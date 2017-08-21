@@ -24,6 +24,6 @@ public class Unadjusted implements IAdjust
 
     @Override
     public String getName() {
-        return "Unadjusted";
+        return "UnadjustedPValue";
     }
 }

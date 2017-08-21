@@ -24,6 +24,6 @@ public class Z implements IAdjust
 
     @Override
     public String getName() {
-        return "Z";
+        return "ZValue";
     }
 }

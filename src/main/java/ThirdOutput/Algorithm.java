@@ -3,10 +3,10 @@ package ThirdOutput;
 public class Algorithm
 {
     private String algorithm;
-    private double pValue;
+    private double value;
 
-    public Algorithm(String algorithm, double pValue) {
+    public Algorithm(String algorithm, double value) {
         this.algorithm = algorithm;
-        this.pValue = pValue;
+        this.value = value;
     }
 }
