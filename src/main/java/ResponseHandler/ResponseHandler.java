@@ -14,10 +14,7 @@ import SecondOutput.AlgorithmMeans;
 import SecondOutput.Output;
 import Tests.GroupDifferenceTest.*;
 import Tests.NormalityTests.KolmogorovSmirnov;
-import Tests.PAdjust.Holm;
-import Tests.PAdjust.IAdjust;
-import Tests.PAdjust.Unadjusted;
-import Tests.PAdjust.Z;
+import Tests.PAdjust.*;
 import Tests.SimilarityTest.AndersonDarlingTest;
 import Tests.SimilarityTest.ISimilarityTest;
 import Tests.SimilarityTest.KolmogorovSmirnovTest;
@@ -73,7 +70,6 @@ public class ResponseHandler
     public static String postHoc(String request)
     {
         Input data = new Gson().fromJson(request, Input.class);
-        Map<String, Double> map = new HashMap<>();
 
         AlgorithmMeans R1 = null;
 
@@ -102,6 +98,7 @@ public class ResponseHandler
         iAdjusts.add(new Z());
         iAdjusts.add(new Unadjusted());
         iAdjusts.add(new Holm());
+        iAdjusts.add(new Hochberg());
 
 
         List<Adjusted> adjustedList = new ArrayList<>();
