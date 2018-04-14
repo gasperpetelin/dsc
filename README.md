@@ -215,3 +215,182 @@ String response = ResponseHandler.calculatePValue(inputJson);
 }
 ```
 
+
+### Posthoc analiza
+
+```java
+String response = ResponseHandler.postHoc(inputJson);
+```
+
+#### Vhod - JSON
+
+```json
+{
+	"algorithm_means": [{
+		"name": "BSif",
+		"mean": 6.295454545454546
+	}, {
+		"name": "BSqi",
+		"mean": 5.318181818181818
+	}, {
+		"name": "BSrr",
+		"mean": 5.818181818181818
+	}, {
+		"name": "CMA.CSA",
+		"mean": 2.522727272727273
+	}, {
+		"name": "CMA.TPA",
+		"mean": 2.9545454545454546
+	}, {
+		"name": "GP1.CMAES",
+		"mean": 5.2727272727272725
+	}, {
+		"name": "RAND.2xDefault",
+		"mean": 8.022727272727273
+	}, {
+		"name": "RF5.CMAES",
+		"mean": 8.659090909090908
+	}, {
+		"name": "Sifeg",
+		"mean": 5.045454545454546
+	}, {
+		"name": "Srr",
+		"mean": 5.090909090909091
+	}],
+	"k": 10,
+	"n": 22,
+	"base_algorithm": "CMA.CSA",
+	"method": "F"
+}
+```
+
+#### Izhod - JSON
+
+
+```json
+{
+	"adjustments": [{
+		"name": "ZValue",
+		"algorithms": [{
+			"algorithm": "Sifeg",
+			"value": -2.763509267412429
+		}, {
+			"algorithm": "BSif",
+			"value": -4.132815661175345
+		}, {
+			"algorithm": "GP1.CMAES",
+			"value": -3.012474066278413
+		}, {
+			"algorithm": "Srr",
+			"value": -2.8133022271856256
+		}, {
+			"algorithm": "RF5.CMAES",
+			"value": -6.722049569381582
+		}, {
+			"algorithm": "BSqi",
+			"value": -3.0622670260516105
+		}, {
+			"algorithm": "RAND.2xDefault",
+			"value": -6.024948132556827
+		}, {
+			"algorithm": "BSrr",
+			"value": -3.6099895835567763
+		}, {
+			"algorithm": "CMA.TPA",
+			"value": -0.47303311784537055
+		}]
+	}, {
+		"name": "UnadjustedPValue",
+		"algorithms": [{
+			"algorithm": "Sifeg",
+			"value": 0.00285917342346042
+		}, {
+			"algorithm": "BSif",
+			"value": 1.7917306114404924E-5
+		}, {
+			"algorithm": "GP1.CMAES",
+			"value": 0.0012956378802662768
+		}, {
+			"algorithm": "Srr",
+			"value": 0.0024517769811942852
+		}, {
+			"algorithm": "RF5.CMAES",
+			"value": 8.959298436489356E-12
+		}, {
+			"algorithm": "BSqi",
+			"value": 0.0010983369889655701
+		}, {
+			"algorithm": "RAND.2xDefault",
+			"value": 8.458193208339883E-10
+		}, {
+			"algorithm": "BSrr",
+			"value": 1.5310465084647748E-4
+		}, {
+			"algorithm": "CMA.TPA",
+			"value": 0.31809477587118723
+		}]
+	}, {
+		"name": "Holm",
+		"algorithms": [{
+			"algorithm": "Sifeg",
+			"value": 0.007355330943582856
+		}, {
+			"algorithm": "BSif",
+			"value": 1.2542114280083446E-4
+		}, {
+			"algorithm": "GP1.CMAES",
+			"value": 0.005491684944827851
+		}, {
+			"algorithm": "Srr",
+			"value": 0.007355330943582856
+		}, {
+			"algorithm": "RF5.CMAES",
+			"value": 8.063368592840421E-11
+		}, {
+			"algorithm": "BSqi",
+			"value": 0.005491684944827851
+		}, {
+			"algorithm": "RAND.2xDefault",
+			"value": 6.766554566671906E-9
+		}, {
+			"algorithm": "BSrr",
+			"value": 9.186279050788649E-4
+		}, {
+			"algorithm": "CMA.TPA",
+			"value": 0.31809477587118723
+		}]
+	}, {
+		"name": "Hochberg",
+		"algorithms": [{
+			"algorithm": "Sifeg",
+			"value": 0.00571834684692084
+		}, {
+			"algorithm": "BSif",
+			"value": 1.2542114280083446E-4
+		}, {
+			"algorithm": "GP1.CMAES",
+			"value": 0.005182551521065107
+		}, {
+			"algorithm": "Srr",
+			"value": 0.00571834684692084
+		}, {
+			"algorithm": "RF5.CMAES",
+			"value": 8.063368592840421E-11
+		}, {
+			"algorithm": "BSqi",
+			"value": 0.005182551521065107
+		}, {
+			"algorithm": "RAND.2xDefault",
+			"value": 6.766554566671906E-9
+		}, {
+			"algorithm": "BSrr",
+			"value": 9.186279050788649E-4
+		}, {
+			"algorithm": "CMA.TPA",
+			"value": 0.31809477587118723
+		}]
+	}]
+}
+```
+
+
