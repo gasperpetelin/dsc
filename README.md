@@ -175,6 +175,11 @@ String response = ResponseHandler.calculatePValue(inputJson);
 }
 ```
 
+### Veljavne vrednosti za parameter "method"
+* WSR/WilcoxonSignedRank
+* PT/PairedT
+
+
 #### Izhod - JSON
 
 
