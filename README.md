@@ -9,6 +9,7 @@ String response = ResponseHandler.calculateRank(inputJson);
 ```json
 {
 	"alpha": 0.5,
+	"method": "KS",
 	"data":[
 		{
 			"name":"algorithmName1",
@@ -39,6 +40,11 @@ String response = ResponseHandler.calculateRank(inputJson);
 	]
 }
 ```
+
+### Veljavne vrednosti za parameter "method"
+
+* AD/AndersonDarling
+* KS/KolmogorovSmirnov
 
 
 #### Izhod - JSON
