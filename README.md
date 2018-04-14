@@ -176,9 +176,16 @@ String response = ResponseHandler.calculatePValue(inputJson);
 ```
 
 ### Veljavne vrednosti za parameter "method"
+
+#### Za primerjavo 2 algoritmov sta na voljo testa:
 * WSR/WilcoxonSignedRank
 * PT/PairedT
 
+#### Za primerjavo več algoritmov so na voljo testi:
+* F/Friedman
+* FA/FriedmanAlign
+* ID/ImanDavenport
+* ANOVA/RepeatedMeasureAnova
 
 #### Izhod - JSON
 
@@ -270,8 +277,7 @@ String response = ResponseHandler.postHoc(inputJson);
 	}],
 	"k": 10,
 	"n": 22,
-	"base_algorithm": "CMA.CSA",
-	"method": "F"
+	"base_algorithm": "CMA.CSA"
 }
 ```
 
